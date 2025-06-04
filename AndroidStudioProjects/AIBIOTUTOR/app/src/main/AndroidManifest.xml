@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/bio"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AIBIOTUTOR"
+        tools:targetApi="31">
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReproductionVideos"
+            android:exported="false" />
+        <activity
+            android:name=".AnatomyVideos"
+            android:exported="false" />
+        <activity
+            android:name=".NutritionVideos"
+            android:exported="false" />
+        <activity
+            android:name=".getstarted"
+            android:exported="false" />
+        <activity
+            android:name=".RespirationVideos"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:supportsPictureInPicture="true" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".AnatomyTheory"
+            android:exported="false" />
+        <activity
+            android:name=".ReactionGame"
+            android:exported="false" />
+        <activity
+            android:name=".OnlineAnatomy"
+            android:exported="false" />
+        <activity
+            android:name=".OnlineNutri"
+            android:exported="false" />
+        <activity
+            android:name=".OnlineRespira"
+            android:exported="false" />
+        <activity
+            android:name=".OnlineRepro"
+            android:exported="false" />
+        <activity
+            android:name=".anatomy"
+            android:exported="false" />
+        <activity
+            android:name=".NutritionTheory"
+            android:exported="false" />
+        <activity
+            android:name=".ReproductionTheory"
+            android:exported="false" />
+        <activity
+            android:name=".RespirationTheory"
+            android:exported="false" />
+        <activity
+            android:name=".GuessNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TicTacToeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".game"
+            android:exported="false" />
+        <activity
+            android:name=".Virtual_Bio"
+            android:exported="false" />
+        <activity
+            android:name=".virtual_biology_lab"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".results"
+            android:exported="false" />
+        <activity
+            android:name=".respiration"
+            android:exported="false" />
+        <activity
+            android:name=".resetpassword"
+            android:exported="false" />
+        <activity
+            android:name=".reproduction"
+            android:exported="false" />
+        <activity
+            android:name=".Quiz"
+            android:exported="false" />
+        <activity
+            android:name=".peformance"
+            android:exported="false" />
+        <activity
+            android:name=".nutrition"
+            android:exported="false" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".livetutoring"
+            android:exported="false" />
+        <activity
+            android:name=".general"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword"
+            android:exported="false" />
+        <activity
+            android:name=".chatbot"
+            android:exported="false" />
+        <activity
+            android:name=".analytics"
+            android:exported="false" />
+    </application>
+
+</manifest>

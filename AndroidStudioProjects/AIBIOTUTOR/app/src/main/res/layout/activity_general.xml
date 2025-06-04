@@ -1,0 +1,93 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".general"
+    >
+
+    <!-- Toolbar with App Title and Logo -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorPrimary"
+        android:elevation="4dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Bio Tutor"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="start|center_vertical"
+            android:paddingStart="16dp"/>
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/bio"
+            android:contentDescription="App Logo"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- PDF Section -->
+    <TextView
+        android:id="@+id/pdfTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PDF Resources"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <!-- CardView for PDF Items -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pdfCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/pdfIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pdf_icon"
+                android:contentDescription="PDF Icon" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample PDF"
+                android:textSize="16sp"
+                android:paddingStart="16dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- AI Recommended Section -->
+    <TextView
+        android:id="@+id/aiRecommendedTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AI Recommended Materials"
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <!-- List of AI Recommended Materials -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/aiRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

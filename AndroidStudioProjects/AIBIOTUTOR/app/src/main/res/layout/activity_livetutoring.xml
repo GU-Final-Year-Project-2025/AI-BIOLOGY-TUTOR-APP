@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".livetutoring"
+    >
+
+    <!-- Header with App Logo and Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- App Logo Image -->
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/bio"
+            android:layout_alignParentStart="true"
+            android:contentDescription="App Logo"
+            android:layout_marginEnd="8dp" />
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Bio Tutor"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/appLogo"
+            android:layout_centerVertical="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Toolbar for Live Session -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/sessionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="Live Tutoring Session"
+        android:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp" />
+
+    <!-- Live Video Chat Container -->
+    <FrameLayout
+        android:id="@+id/videoChatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:background="#14000000">
+
+        <!-- Placeholder for Video Stream -->
+        <TextView
+            android:id="@+id/videoPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video Chat Here"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!-- Whiteboard Canvas -->
+    <FrameLayout
+        android:id="@+id/whiteboardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <!-- Placeholder for Whiteboard -->
+        <TextView
+            android:id="@+id/whiteboardPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whiteboard Here"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!-- Live Session Control Buttons -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- Button to Start/Stop Video -->
+        <Button
+            android:id="@+id/btnStartStopVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Video"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Button to Start/Stop Whiteboard -->
+        <Button
+            android:id="@+id/btnStartStopWhiteboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Whiteboard" />
+    </LinearLayout>
+
+    <!-- Chat Section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/chatHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat Section"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Placeholder for Chat Messages -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/chatMessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat messages will appear here."
+                android:textColor="@android:color/white" />
+        </ScrollView>
+
+        <!-- Input for Sending Chat Messages -->
+        <EditText
+            android:id="@+id/chatInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type a message"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/sendMessageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

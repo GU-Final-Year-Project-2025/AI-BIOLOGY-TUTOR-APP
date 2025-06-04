@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".analytics">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bio"
+      android:layout_gravity="center_horizontal"
+        android:contentDescription="App Logo"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Performance Analytics"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        />
+
+<!--    <com.github.mikephil.charting.charts.BarChart-->
+<!--        android:id="@+id/strengths_chart"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/title"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:contentDescription="Graphical Strength and Weakness Representation"/>-->
+
+    <TextView
+        android:id="@+id/ai_suggestions_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI Suggestions for Improvement"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/ai_suggestions_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Based on your performance, focus more on Biology Practical Simulations."
+        android:textSize="16sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ai_suggestions_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/compare_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Compare with Peers"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ai_suggestions_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</LinearLayout>

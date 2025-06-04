@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="purple_5000">#6200EE</color>
+
+    <color name="md_theme_light_primary">#006C47</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#95F7BC</color>
+    <color name="md_theme_light_onPrimaryContainer">#002112</color>
+    <color name="md_theme_light_secondary">#4E6357</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#D0E8D7</color>
+    <color name="md_theme_light_onSecondaryContainer">#0B1F16</color>
+    <color name="md_theme_light_surface">#FBFDF8</color>
+    <color name="md_theme_light_onSurface">#191C1A</color>
+    <color name="md_theme_light_surfaceVariant">#DCE5DB</color>
+    <color name="md_theme_light_onSurfaceVariant">#404943</color>
+    <color name="outline">#6F7972</color>
+
+
+    <color name="primaryColor">#F8FAFF</color>
+    <color name="secondaryColor">#03A9F4</color>
+    <color name="Accent">#00F5A0</color>
+
+
+<!--    Video player colors-->
+    <color name="green">#3DDC84</color>
+    <color name="shortcut_background">#F5F5F5</color>
+    <color name="ui_controls_background">#98000000</color>
+    <color name="exo_bottom_bar_background" tools:keep="@color/exo_bottom_bar_background">@color/ui_controls_background</color>
+    <color name="exo_black_opacity_70" tools:keep="@color/exo_black_opacity_70">@color/ui_controls_background</color>
+    <color name="exo_styled_error_message_background" tools:keep="@color/exo_styled_error_message_background">@color/ui_controls_background</color>
+
+</resources>

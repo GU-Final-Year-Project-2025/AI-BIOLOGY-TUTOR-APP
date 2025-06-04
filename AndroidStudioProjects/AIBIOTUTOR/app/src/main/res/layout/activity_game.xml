@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Logo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bio"
+        android:alpha="0.15" />
+
+    <!-- 8 Color Layer Blocks -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#FFCDD2"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#F8BBD0"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#E1BEE7"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#D1C4E9"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#C5CAE9"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#BBDEFB"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#B2EBF2"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#C8E6C9"/>
+    </LinearLayout>
+
+    <!-- Content Over Background and Color Layers -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bio"
+                android:contentDescription="App Logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Biology Tutor – Game Zone"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:textColor="#333"/>
+
+            <ImageButton
+                android:id="@+id/ticTacToeIcon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tac"
+                android:contentDescription="Tic Tac Toe"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:padding="8dp"/>
+
+            <ImageButton
+                android:id="@+id/reactionGameIcon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tac1"
+                android:contentDescription="Reaction Game"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:padding="8dp"/>
+
+            <ImageButton
+                android:id="@+id/guessNumberIcon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tac2"
+                android:contentDescription="Guess Number Game"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:padding="8dp"/>
+
+            <!-- Video Section -->
+            <VideoView
+                android:id="@+id/tutorialVideo"
+                android:layout_width="308dp"
+                android:layout_height="129dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="#000000"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
