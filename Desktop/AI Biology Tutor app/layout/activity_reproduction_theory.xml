@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReproductionTheory">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondaryColor"
+        android:elevation="4dp"
+        app:title="Reproduction Notes"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@android:color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
+        >
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="#411591CC"
+            >
+
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_play_circle_filled_24"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                app:tint="#0150FF" />
+
+            <ImageView
+                android:id="@+id/pauseButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_pause_circle_filled_24"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp"/>
+
+            <ImageView
+                android:id="@+id/stopButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/stop"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/chatfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/baseline_auto_mode_24"
+            app:backgroundTint="@color/teal_200" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/baseline_add_circle_24"
+            app:backgroundTint="@color/secondaryColor"
+            app:tint="@android:color/white" />
+        <EditText
+            android:id="@+id/notes"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/editbg"
+            android:layout_marginHorizontal="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

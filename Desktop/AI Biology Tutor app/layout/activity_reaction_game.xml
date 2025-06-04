@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reactionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="#FFFFFF"
+    tools:context=".ReactionGame">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get ready..."
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/gameBox"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#FF0000"
+        android:layout_below="@id/resultTextView"
+        android:onClick="boxTapped"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

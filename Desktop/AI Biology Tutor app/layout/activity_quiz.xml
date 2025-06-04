@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Quiz">
+
+    <!-- Horizontal container for App Logo + Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/appLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/biologo"
+                android:scaleType="centerCrop"
+                android:contentDescription="App Logo" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Bio Tutor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondaryColor"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Horizontal container for Level and Timer (at same vertical level, opposite sides) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/levelTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Level: Diamond"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="8dp"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@android:color/holo_green_dark" />
+
+    <!-- Background Statement -->
+    <TextView
+        android:id="@+id/backgroundTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Background: Cellular respiration occurs in the mitochondria and involves energy production."
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Question -->
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Question: What is the site of cellular respiration?"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <!-- Answer Options -->
+    <RadioGroup
+        android:id="@+id/optionsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 1: Mitochondria"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 2: Chloroplast"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 3: Ribosome"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 4: Nucleus"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="4dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Next"
+        android:textColor="@android:color/white" />
+
+    <!-- Quit Button -->
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="4dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Quit"
+        android:textColor="@android:color/white" />
+</LinearLayout>

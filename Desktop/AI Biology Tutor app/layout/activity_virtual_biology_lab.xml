@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".virtual_biology_lab">
+
+    <!-- AR Fragment for displaying 3D models -->
+    <!--    <fragment-->
+    <!--        android:id="@+id/ux_fragment"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/instructionText"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <!-- Instruction TextView -->
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Step 1: Place the specimen on the slide."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Safety Guidelines TextView -->
+    <TextView
+        android:id="@+id/safetyGuidelinesText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1. Always wear safety goggles.\n2. Handle the microscope gently.\n3. Make sure the area is clear of obstacles."
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/instructionText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Next Step Button -->
+    <Button
+        android:id="@+id/nextStepButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Next Step"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/safetyGuidelinesText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <!-- Finish Button -->
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/nextStepButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+    <!-- Exit Button -->
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:layout_constraintTop_toBottomOf="@id/finishButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

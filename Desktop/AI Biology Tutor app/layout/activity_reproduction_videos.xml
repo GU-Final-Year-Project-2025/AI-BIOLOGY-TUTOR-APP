@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReproductionVideos">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/secondaryColor"
+        android:elevation="4dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        app:title="Reproduction Video"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@android:color/white"
+        android:layout_alignParentTop="true"/>
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        app:use_controller="true"
+        app:resize_mode="fit"
+        android:keepScreenOn="true"
+        app:surface_type="surface_view" />
+
+
+
+</RelativeLayout>
